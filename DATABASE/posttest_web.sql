@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2022 at 02:55 PM
+-- Generation Time: Nov 01, 2022 at 07:23 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -31,7 +31,7 @@ CREATE TABLE `admin` (
   `id` int(10) NOT NULL,
   `username` varchar(25) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `nama` varchar(25) NOT NULL
+  `nama` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -39,14 +39,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `nama`) VALUES
-(14, 'gempar', 'gempar', 'Gempar Panggih Dwi Putra'),
-(15, 'admin', '$2y$10$slEvXKNhSb2VLQR8LL9xju99cik5drgv.74xPhV/7Dy3vG1WtomEa', 'Admin Tampan dan Berani'),
-(17, 'acun', '$2y$10$.27IqPwF0JQ8soD3WtzKXu7e/0.B36lHwm8D1byti6XyoRebP66ym', 'Acun th Destroyer'),
-(19, 'kipak', '$2y$10$DvprUpZb8woxLeNwaixn3urzHMDvUBxl1/Vp.XrytwgpjRRVmcZGq', 'Kipak the Fak'),
-(20, 'rider', '$2y$10$i5g4EftKUhaL41rGjnbH0u5z339t3rN7DGmYBetWaAF/Ut3zduFPK', 'Kamen Rider'),
-(23, 'tapir', '$2y$10$/f3WYZDt1sPJ50C6udo5qOEAd2VjsRspPopja6zM56pIrCi.58jLO', 'Tapir Boom'),
-(25, 'admin', '$2y$10$5NA0udHRctwntiWH52OpZOhwaV/wx5jewZP9PhUE1/YYiBNJ5gbti', 'siuuuu'),
-(26, 'acul', '$2y$10$q8/0h9GYzCXxnvEgo9.AaOYLwjBxZ9bFBVWXqZ4kUtv0vEjVZThwq', 'Acul the Acun');
+(27, 'gempar', '$2y$10$.dRvDLmIj6LVQm6i.EJi8OWQDtC/XcFXEy2gj/wlxtplB5ZmqpeUm', 'Gempar Panggih Dwi Putra'),
+(28, 'admin', '$2y$10$GkJ6K26eigIAFMIvqfxwJepf2X0lVRgnf1GcenDzao3HJkD52tarC', 'Admin Tampan dan Berani');
 
 -- --------------------------------------------------------
 
@@ -131,7 +125,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `foto`, `username`, `password`, `nama`, `idtarif`) VALUES
-('PEL1', 'download.jpg', 'gempar', 'gempar', 'Gempar Panggih Dwi P', 'T4');
+('PEL1', 'download.jpg', 'gempar', 'gempar', 'Gempar Panggih Dwi P', 'T4'),
+('PEL2', '4zlg07vi1pc61.png', 'saki', 'saki', 'Ayase Saki', 'T2'),
+('PEL3', '577303.jpg', 'arisato', 'arisato', 'Minato Arisato', 'T1');
 
 --
 -- Indexes for dumped tables
@@ -178,7 +174,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables
